@@ -25,12 +25,10 @@ fn reading_from_console() {
     io::stdin().read_line(&mut buffer).unwrap();
     let name = buffer.trim().to_string();
     buffer.clear();
-
     print!("Enter student ID: ");
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut buffer).unwrap();
     let id = buffer.trim().parse().unwrap();
-
     let student = Student { name, id };
     println!("Student Name: {}, ID: {}", student.name, student.id);
 }
